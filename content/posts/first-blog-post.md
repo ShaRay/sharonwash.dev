@@ -27,7 +27,7 @@ export default {
         {
           key: "description",
           name: "description",
-          content: this.$page.post.description
+          content: this.$page.post.description,
         }
       ]
     };
