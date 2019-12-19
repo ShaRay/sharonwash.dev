@@ -14,3 +14,17 @@ I had an issue installing Gridsome globally using npm becasuse it wouldn't insta
 I created the blog site after installing Gridsome globally by using "Gridsome create (name of site)". Then I changed directories to the site I created. To build the site I use "gridsome develop". I then followed a blog tutorial on how to set up the blog with the plugin from Gridsome - "@gridsome/source-filesystem". This plugin transforms files into content that can be fetched with GraphQL in your components.
 
 Another concept I have learned is what a slug is. Not a nasty worm but it is a URL slug. It is the exact address of a specfic page or website. It is usually at the end part of the url.
+
+One more concept I have learned is about metaInfo. Gridsome incorporates Vue Meta to populate <head>. MetaInfo is a function and should written as the example I am including.
+
+<script>
+export default {
+  metaInfo: {
+    title: "This is Home page",
+    meta: [
+      { name: "description", content: "Learn coding with our free tutorials" },
+      { name: "keywords", content: "react,vue,angular" }
+    ]
+  }
+};
+</script>
