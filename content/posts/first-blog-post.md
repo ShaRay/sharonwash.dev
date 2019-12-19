@@ -15,25 +15,27 @@ I created the blog site after installing Gridsome globally by using "Gridsome cr
 
 Another concept I have learned is what a slug is. Not a nasty worm but it is a URL slug. It is the exact address of a specfic page or website. It is usually at the end part of the url.
 
-One more concept I have learned is about metaInfo. Gridsome incorporates Vue Meta to populate <head>. MetaInfo is a function and should written as the example I am including.
+One more concept I have learned is about metaInfo. Gridsome incorporates Vue Meta to populate <head>. MetaInfo is a function and should written like the example I am including.
 
 ```
 <script>
 export default {
-  metaInfo: {
-    title: "This is Home page", meta: [
-      {
-        name: "description",
-        content: "Learn coding with our free tutorials"
-      },
-      {
-        name: "keywords",
-        content: "react,vue,angular"
-      }
-    ]
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.$page.post.description
+        }
+      ]
+    };
   }
 };
 </script>
 ```
 
-metainfo wrap in function and not an object
+"a component’s data option must be a function, so that each instance can maintain an independent copy of the returned data object
+If Vue didn’t have this rule, clicking on one button would affect the data of all other instances."
+From Vuejs.org Reusing Components and data must be a function
