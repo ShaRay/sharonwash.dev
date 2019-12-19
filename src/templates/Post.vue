@@ -40,3 +40,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+pre {
+  overflow: scroll;
+}
+</style>
