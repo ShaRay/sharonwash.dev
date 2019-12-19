@@ -28,7 +28,14 @@ query Post ($path: String!) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.$page.post.title,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: this.$page.post.description
+        }
+      ]
     };
   }
 };
