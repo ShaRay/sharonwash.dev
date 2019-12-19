@@ -38,4 +38,5 @@ export default {
 
 "a component’s data option must be a function, so that each instance can maintain an independent copy of the returned data object.
 If Vue didn’t have this rule, clicking on one button would affect the data of all other instances."
-From Vuejs.org Reusing Components and data must be a function
+From Vuejs.org
+Reusing Components and data must be a function
