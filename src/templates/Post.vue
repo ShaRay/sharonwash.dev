@@ -4,9 +4,7 @@
     <g-link to="/" class="link">Home</g-link>
     <div class="post-title">
       <h1>{{ $page.post.title }}</h1>
-      <p class="post-date">
-        {{ $page.post.date }} | {{ $page.post.timeToRead }} min read
-      </p>
+      <p class="post-date">{{ $page.post.date }} | {{ $page.post.timeToRead }} min read</p>
     </div>
     <div class="post-content">
       <div v-html="$page.post.content" />
@@ -25,3 +23,13 @@ query Post ($path: String!) {
   }
 }
 </page-query>
+
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: this.$page.post.title
+    };
+  }
+};
+</script>
