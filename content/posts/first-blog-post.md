@@ -17,4 +17,23 @@ Another concept I have learned is what a slug is. Not a nasty worm but it is a U
 
 One more concept I have learned is about metaInfo. Gridsome incorporates Vue Meta to populate <head>. MetaInfo is a function and should written as the example I am including.
 
-`<script> export default { metaInfo: { title: "This is Home page", meta: [ { name: "description", content: "Learn coding with our free tutorials" }, { name: "keywords", content: "react,vue,angular" } ] } }; </script>`
+```
+<script>
+export default {
+  metaInfo: {
+    title: "This is Home page", meta: [
+      {
+        name: "description",
+        content: "Learn coding with our free tutorials"
+      },
+      {
+        name: "keywords",
+        content: "react,vue,angular"
+      }
+    ]
+  }
+};
+</script>
+```
+
+metainfo wrap in function and not an object
