@@ -1,11 +1,15 @@
 <template>
   <Layout>
     <header class="header">
-      <h1>Learning To Code Blog</h1>
-      <p>My blog to help me retain what I have learned</p>
+      <h1 class="text-4xl">Learning To Code Blog</h1>
+      <p class="text-xl">My blog to help me retain what I have learned</p>
     </header>
     <section class="posts">
-      <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
+      <PostList
+        v-for="edge in $page.allPost.edges"
+        :key="edge.node.id"
+        :post="edge.node"
+      />
     </section>
   </Layout>
 </template>
